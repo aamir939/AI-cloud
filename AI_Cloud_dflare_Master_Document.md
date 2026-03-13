@@ -93,13 +93,9 @@ A tenant administrator logs into the portal, creates a project, selects GPU node
 > **Figure 1 — System Context Diagram**
 
 
-
-
 ![System Context Diagram](diagrams/fig01-system-context.png)
 
 *System Context Diagram*
-
-
 
 
 ---
@@ -113,13 +109,9 @@ A tenant administrator logs into the portal, creates a project, selects GPU node
 > **Figure 2 — Bare Metal Provisioning Flow**
 
 
-
-
 ![Bare Metal Provisioning Flow](diagrams/fig02-provisioning-flow.png)
 
 *Bare Metal Provisioning Flow*
-
-
 
 
 **How It Works:**
@@ -196,17 +188,6 @@ AI Cloud/dflare runs Slurm on top of Kubernetes using the Slinky Operator. The p
 | **DDN AI400** | Lustre parallel filesystem | InfiniBand (400G x multiple links per node) | Training datasets, model checkpoints, experiment results |
 | **VAST Data** | Unified file/object storage | Ethernet (25G) | Platform services (databases, backups, logs, container registry) |
 
-> **Figure 3 — Storage Architecture & Double Isolation**
-
-
-
-
-![Storage Architecture & Double Isolation](diagrams/fig03-storage-architecture.png)
-
-*Storage Architecture & Double Isolation*
-
-
-
 
 #### DDN Lustre — The Fast Storage
 
@@ -234,13 +215,9 @@ Even if one layer were compromised, the other would still block unauthorized acc
 > **Figure 4 — Tenant Isolation Model (6 Layers)**
 
 
-
-
 ![Tenant Isolation Model (6 Layers)](diagrams/fig04-tenant-isolation.png)
 
 *Tenant Isolation Model (6 Layers)*
-
-
 
 
 *Zero-trust by design — every layer is independently enforced — compromise of one layer does not grant access through another.*
@@ -295,17 +272,6 @@ Even if one layer were compromised, the other would still block unauthorized acc
 
 #### Metering Pipeline
 
-> **Figure 5 — Metering Pipeline Flow**
-
-
-
-
-![Metering Pipeline Flow](diagrams/fig05-metering-pipeline.png)
-
-*Metering Pipeline Flow*
-
-
-
 
 Raw metrics flow through a multi-stage pipeline: hardware-level exporters collect data every 15–30 seconds → Prometheus scrapes and stores short-term → VictoriaMetrics provides long-term HA storage → orbiter-metering aggregates into billable records per tenant/project/user → billing reports generated and exportable as CSV/PDF.
 
@@ -352,13 +318,9 @@ The platform automates VPC and subnet lifecycle through the network-manager micr
 > **Figure 6 — Network VPC & Fabric Architecture**
 
 
-
-
 ![Network VPC & Fabric Architecture](diagrams/fig06-network-vpc.png)
 
 *Network VPC & Fabric Architecture*
-
-
 
 
 *GPU-to-GPU: RDMA 400G × multiple links/node · GPU-to-Storage: Lustre/RDMA · Both isolated per tenant via UFM PKey*
@@ -522,13 +484,9 @@ A Palo Alto firewall sits between the orchestration layer and GPU nodes. Three l
 > **Figure 7 — Architecture Tiers**
 
 
-
-
 ![Architecture Tiers](diagrams/fig07-architecture-tiers.png)
 
 *Architecture Tiers*
-
-
 
 
 *Tenant declares intent → API routes to orchestration → Microservices drive physical infrastructure → Hardware converges*
@@ -605,17 +563,6 @@ A Palo Alto firewall sits between the orchestration layer and GPU nodes. Three l
 ### Zero-Trust Security Model
 
 AI Cloud/dflare implements defense-in-depth with zero-trust principles — no action is trusted by default, every request is authenticated and authorized at multiple levels:
-
-> **Figure 8 — Zero-Trust Defense-in-Depth**
-
-
-
-
-![Zero-Trust Defense-in-Depth](diagrams/fig08-zero-trust.png)
-
-*Zero-Trust Defense-in-Depth*
-
-
 
 
 | Security Layer | Mechanism | Protection |
@@ -704,17 +651,6 @@ AI Cloud/dflare implements defense-in-depth with zero-trust principles — no ac
 | **Network Isolation** | Pool of 10+ tenant VRFs, 4 VLANs per VRF, expandable |
 
 ### Tenant Onboarding Flow
-
-> **Figure 9 — Tenant Onboarding Sequence**
-
-
-
-
-![Tenant Onboarding Sequence](diagrams/fig09-tenant-onboarding.png)
-
-*Tenant Onboarding Sequence*
-
-
 
 
 1. **Domain Created** — Platform Super Admin creates tenant with name, initial quota, and network allocation
