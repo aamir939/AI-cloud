@@ -188,6 +188,11 @@ AI Cloud/dflare runs Slurm on top of Kubernetes using the Slinky Operator. The p
 | **DDN AI400** | Lustre parallel filesystem | InfiniBand (400G x multiple links per node) | Training datasets, model checkpoints, experiment results |
 | **VAST Data** | Unified file/object storage | Ethernet (25G) | Platform services (databases, backups, logs, container registry) |
 
+> **Figure 3 — Storage Architecture & Double Isolation**
+
+![Storage Architecture & Double Isolation](diagrams/fig03-storage-architecture.png)
+
+*Storage Architecture & Double Isolation*
 
 #### DDN Lustre — The Fast Storage
 
@@ -272,6 +277,11 @@ Even if one layer were compromised, the other would still block unauthorized acc
 
 #### Metering Pipeline
 
+> **Figure 5 — Metering Pipeline Flow**
+
+![Metering Pipeline Flow](diagrams/fig05-metering-pipeline.png)
+
+*Metering Pipeline Flow*
 
 Raw metrics flow through a multi-stage pipeline: hardware-level exporters collect data every 15–30 seconds → Prometheus scrapes and stores short-term → VictoriaMetrics provides long-term HA storage → orbiter-metering aggregates into billable records per tenant/project/user → billing reports generated and exportable as CSV/PDF.
 
@@ -564,6 +574,11 @@ A Palo Alto firewall sits between the orchestration layer and GPU nodes. Three l
 
 AI Cloud/dflare implements defense-in-depth with zero-trust principles — no action is trusted by default, every request is authenticated and authorized at multiple levels:
 
+> **Figure 8 — Zero-Trust Defense-in-Depth**
+
+![Zero-Trust Defense-in-Depth](diagrams/fig08-zero-trust.png)
+
+*Zero-Trust Defense-in-Depth*
 
 | Security Layer | Mechanism | Protection |
 |---|---|---|
@@ -652,6 +667,11 @@ AI Cloud/dflare implements defense-in-depth with zero-trust principles — no ac
 
 ### Tenant Onboarding Flow
 
+> **Figure 9 — Tenant Onboarding Sequence**
+
+![Tenant Onboarding Sequence](diagrams/fig09-tenant-onboarding.png)
+
+*Tenant Onboarding Sequence*
 
 1. **Domain Created** — Platform Super Admin creates tenant with name, initial quota, and network allocation
 2. **Identity Provisioned** — Keycloak realm auto-created with default roles, clients, and auth flows
