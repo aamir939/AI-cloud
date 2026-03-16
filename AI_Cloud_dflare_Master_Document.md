@@ -576,7 +576,7 @@ AI Cloud/dflare implements defense-in-depth with zero-trust principles — no ac
 
 > **Figure 8 — Zero-Trust Defense-in-Depth**
 
-![Zero-Trust Defense-in-Depth](diagrams/fig08-zero-trust.png)
+![Zero-Trust Defense-in-Depth](diagrams/fig08-zero-trust-security.png)
 
 *Zero-Trust Defense-in-Depth*
 
