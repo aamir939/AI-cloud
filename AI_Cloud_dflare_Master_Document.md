@@ -93,7 +93,7 @@ A tenant administrator logs into the portal, creates a project, selects GPU node
 > **Figure 1 — System Context Diagram**
 
 
-![System Context Diagram](diagrams/fig01-system-context.png)
+![System Context Diagram](diagrams/fig01-system-context-v2.png)
 
 *System Context Diagram*
 
@@ -109,7 +109,7 @@ A tenant administrator logs into the portal, creates a project, selects GPU node
 > **Figure 2 — Bare Metal Provisioning Flow**
 
 
-![Bare Metal Provisioning Flow](diagrams/fig02-provisioning-flow.png)
+![Bare Metal Provisioning Flow](diagrams/fig02-provisioning-flow-v2.png)
 
 *Bare Metal Provisioning Flow*
 
@@ -190,7 +190,7 @@ AI Cloud/dflare runs Slurm on top of Kubernetes using the Slinky Operator. The p
 
 > **Figure 3 — Storage Architecture & Double Isolation**
 
-![Storage Architecture & Double Isolation](diagrams/fig03-storage-architecture.png)
+![Storage Architecture & Double Isolation](diagrams/fig03-storage-architecture-v2.png)
 
 *Storage Architecture & Double Isolation*
 
@@ -220,7 +220,7 @@ Even if one layer were compromised, the other would still block unauthorized acc
 > **Figure 4 — Tenant Isolation Model (6 Layers)**
 
 
-![Tenant Isolation Model (6 Layers)](diagrams/fig04-tenant-isolation.png)
+![Tenant Isolation Model (6 Layers)](diagrams/fig04-tenant-isolation-v2.png)
 
 *Tenant Isolation Model (6 Layers)*
 
@@ -279,7 +279,7 @@ Even if one layer were compromised, the other would still block unauthorized acc
 
 > **Figure 5 — Metering Pipeline Flow**
 
-![Metering Pipeline Flow](diagrams/fig05-metering-pipeline.png)
+![Metering Pipeline Flow](diagrams/fig05-metering-pipeline-v2.png)
 
 *Metering Pipeline Flow*
 
@@ -328,7 +328,7 @@ The platform automates VPC and subnet lifecycle through the network-manager micr
 > **Figure 6 — Network VPC & Fabric Architecture**
 
 
-![Network VPC & Fabric Architecture](diagrams/fig06-network-vpc.png)
+![Network VPC & Fabric Architecture](diagrams/fig06-network-vpc-v2.png)
 
 *Network VPC & Fabric Architecture*
 
@@ -494,7 +494,7 @@ A Palo Alto firewall sits between the orchestration layer and GPU nodes. Three l
 > **Figure 7 — Architecture Tiers**
 
 
-![Architecture Tiers](diagrams/fig07-architecture-tiers.png)
+![Architecture Tiers](diagrams/fig07-architecture-tiers-v2.png)
 
 *Architecture Tiers*
 
@@ -576,7 +576,7 @@ AI Cloud/dflare implements defense-in-depth with zero-trust principles — no ac
 
 > **Figure 8 — Zero-Trust Defense-in-Depth**
 
-![Zero-Trust Defense-in-Depth](diagrams/fig08-zero-trust-security.png)
+![Zero-Trust Defense-in-Depth](diagrams/fig08-zero-trust-security-v2.png)
 
 *Zero-Trust Defense-in-Depth*
 
@@ -669,7 +669,7 @@ AI Cloud/dflare implements defense-in-depth with zero-trust principles — no ac
 
 > **Figure 9 — Tenant Onboarding Sequence**
 
-![Tenant Onboarding Sequence](diagrams/fig09-tenant-onboarding.png)
+![Tenant Onboarding Sequence](diagrams/fig09-tenant-onboarding-v2.png)
 
 *Tenant Onboarding Sequence*
 
