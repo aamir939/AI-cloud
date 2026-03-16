@@ -496,9 +496,6 @@ A Palo Alto firewall sits between the orchestration layer and GPU nodes. Three l
 
 ![Architecture Tiers](diagrams/fig07-architecture-tiers-v2.png)
 
-*Architecture Tiers*
-
-
 *Tenant declares intent → API routes to orchestration → Microservices drive physical infrastructure → Hardware converges*
 
 ### Platform Component Map
